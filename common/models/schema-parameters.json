@@ -1,0 +1,17 @@
+{
+  "name": "SchemaParameters",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "parameters": {
+      "type": "JSONSchemaObject"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

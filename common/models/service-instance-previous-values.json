@@ -1,0 +1,29 @@
+{
+  "name": "ServiceInstancePreviousValues",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "service_id": {
+      "type": "string",
+      "x-deprecated": true
+    },
+    "plan_id": {
+      "type": "string"
+    },
+    "organization_id": {
+      "type": "string",
+      "x-deprecated": true
+    },
+    "space_id": {
+      "type": "string",
+      "x-deprecated": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

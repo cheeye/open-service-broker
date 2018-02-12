@@ -1,0 +1,20 @@
+{
+  "name": "ServiceBindingResourceObject",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "app_guid": {
+      "type": "string"
+    },
+    "route": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

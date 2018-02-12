@@ -1,0 +1,28 @@
+{
+  "name": "ServiceBinding",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "credentials": {
+      "type": "Object"
+    },
+    "syslog_drain_url": {
+      "type": "string"
+    },
+    "route_service_url": {
+      "type": "string"
+    },
+    "volume_mounts": {
+      "type": [
+        "ServiceBindingVolumeMount"
+      ]
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

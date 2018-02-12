@@ -1,0 +1,50 @@
+{
+  "name": "ServiceBindingVolumeMount",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "driver": {
+      "type": "string",
+      "required": true
+    },
+    "container_dir": {
+      "type": "string",
+      "required": true
+    },
+    "mode": {
+      "type": "string",
+      "required": true,
+      "enum": [
+        "r",
+        "rw"
+      ]
+    },
+    "device_type": {
+      "type": "string",
+      "required": true,
+      "enum": [
+        "shared"
+      ]
+    },
+    "device": {
+      "type": "ServiceBindingVolumeMountDevice",
+      "required": true,
+      "properties": {
+        "volume_id": {
+          "type": "string"
+        },
+        "mount_config": {
+          "type": "object",
+          "$ref": "#/definitions/Object"
+        }
+      }
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

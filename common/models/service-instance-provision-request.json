@@ -1,0 +1,39 @@
+{
+  "name": "ServiceInstanceProvisionRequest",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "service_id": {
+      "type": "string",
+      "required": true
+    },
+    "plan_id": {
+      "type": "string",
+      "required": true
+    },
+    "context": {
+      "type": "Context",
+      "description": "See [Context Conventions](https://github.com/openservicebrokerapi/servicebroker/blob/master/profile.md#context-object) for more details."
+    },
+    "organization_guid": {
+      "type": "string",
+      "required": true,
+      "x-deprecated": true
+    },
+    "space_guid": {
+      "type": "string",
+      "required": true,
+      "x-deprecated": true
+    },
+    "parameters": {
+      "type": "Object"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

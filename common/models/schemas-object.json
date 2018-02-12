@@ -1,0 +1,54 @@
+{
+  "name": "SchemasObject",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "service_instance": {
+      "type": "ServiceInstanceSchemaObject",
+      "properties": {
+        "create": {
+          "type": "object",
+          "properties": {
+            "parameters": {
+              "type": "object",
+              "$ref": "#/definitions/JSONSchemaObject"
+            }
+          },
+          "$ref": "#/definitions/SchemaParameters"
+        },
+        "update": {
+          "type": "object",
+          "properties": {
+            "parameters": {
+              "type": "object",
+              "$ref": "#/definitions/JSONSchemaObject"
+            }
+          },
+          "$ref": "#/definitions/SchemaParameters"
+        }
+      }
+    },
+    "service_binding": {
+      "type": "ServiceBindingSchemaObject",
+      "properties": {
+        "create": {
+          "type": "object",
+          "properties": {
+            "parameters": {
+              "type": "object",
+              "$ref": "#/definitions/JSONSchemaObject"
+            }
+          },
+          "$ref": "#/definitions/SchemaParameters"
+        }
+      }
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

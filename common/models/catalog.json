@@ -1,0 +1,25 @@
+{
+  "name": "Catalog",
+  "base": "Model",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "hidden": [
+    "id"
+  ],
+  "http": {
+    "path": "/"
+  },
+  "properties": {
+    "services": {
+      "type": [
+        "Service"
+      ]
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

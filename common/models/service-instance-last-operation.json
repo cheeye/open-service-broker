@@ -1,0 +1,26 @@
+{
+  "name": "ServiceInstanceLastOperation",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "state": {
+      "type": "string",
+      "required": true,
+      "enum": [
+        "in progress",
+        "succeeded",
+        "failed"
+      ]
+    },
+    "description": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

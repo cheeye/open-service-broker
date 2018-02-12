@@ -1,0 +1,124 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "Catalog": {
+    "dataSource": null,
+    "public": true
+  },
+  "Service": {
+    "dataSource": null,
+    "public": false
+  },
+  "DashboardClient": {
+    "dataSource": null,
+    "public": false
+  },
+  "Plan": {
+    "dataSource": null,
+    "public": false
+  },
+  "SchemasObject": {
+    "dataSource": null,
+    "public": false
+  },
+  "ServiceInstanceSchemaObject": {
+    "dataSource": null,
+    "public": false
+  },
+  "ServiceBindingSchemaObject": {
+    "dataSource": null,
+    "public": false
+  },
+  "SchemaParameters": {
+    "dataSource": null,
+    "public": false
+  },
+  "JSONSchemaObject": {
+    "dataSource": null,
+    "public": false
+  },
+  "ServiceInstanceProvisionRequest": {
+    "dataSource": null,
+    "public": false
+  },
+  "ServiceInstanceProvision": {
+    "dataSource": null,
+    "public": false
+  },
+  "ServiceInstanceAsyncProvision": {
+    "dataSource": null,
+    "public": false
+  },
+  "ServiceInstanceUpdateRequest": {
+    "dataSource": null,
+    "public": false
+  },
+  "ServiceInstancePreviousValues": {
+    "dataSource": null,
+    "public": false
+  },
+  "AsyncOperation": {
+    "dataSource": null,
+    "public": false
+  },
+  "ServiceInstanceLastOperation": {
+    "dataSource": null,
+    "public": false
+  },
+  "ServiceBindingRequest": {
+    "dataSource": null,
+    "public": false
+  },
+  "ServiceBindingResourceObject": {
+    "dataSource": null,
+    "public": false
+  },
+  "ServiceBinding": {
+    "dataSource": null,
+    "public": false
+  },
+  "ServiceBindingVolumeMount": {
+    "dataSource": null,
+    "public": false
+  },
+  "ServiceBindingVolumeMountDevice": {
+    "dataSource": null,
+    "public": false
+  },
+  "Context": {
+    "dataSource": null,
+    "public": false
+  },
+  "Metadata": {
+    "dataSource": null,
+    "public": false
+  },
+  "Object": {
+    "dataSource": null,
+    "public": false
+  },
+  "Error": {
+    "dataSource": null,
+    "public": false
+  },
+  "ServiceInstances": {
+    "dataSource": null,
+    "public": true
+  },
+  "ServiceBindings": {
+    "dataSource": null,
+    "public": true
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "ServiceBindingSchemaObject",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "create": {
+      "type": "SchemaParameters",
+      "properties": {
+        "parameters": {
+          "type": "object",
+          "$ref": "#/definitions/JSONSchemaObject"
+        }
+      }
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

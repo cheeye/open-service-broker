@@ -1,0 +1,21 @@
+{
+  "name": "ServiceBindingVolumeMountDevice",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "volume_id": {
+      "type": "string",
+      "required": true
+    },
+    "mount_config": {
+      "type": "Object"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

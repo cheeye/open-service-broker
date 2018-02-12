@@ -1,0 +1,67 @@
+{
+  "name": "Service",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "id": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "string",
+      "required": true
+    },
+    "tags": {
+      "type": [
+        "string"
+      ]
+    },
+    "requires": {
+      "type": [
+        "string"
+      ]
+    },
+    "bindable": {
+      "type": "boolean",
+      "required": true
+    },
+    "metadata": {
+      "type": "Metadata",
+      "description": "See [Service Metadata Conventions](https://github.com/openservicebrokerapi/servicebroker/blob/master/profile.md#service-metadata) for more details."
+    },
+    "dashboard_client": {
+      "type": "DashboardClient",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "secret": {
+          "type": "string"
+        },
+        "redirect_uri": {
+          "type": "string"
+        }
+      }
+    },
+    "plan_updateable": {
+      "type": "boolean"
+    },
+    "plans": {
+      "type": [
+        "Plan"
+      ],
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

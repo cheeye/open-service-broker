@@ -1,0 +1,84 @@
+{
+  "name": "Plan",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "string",
+      "required": true
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "string",
+      "required": true
+    },
+    "metadata": {
+      "type": "Metadata",
+      "description": "See [Service Metadata Conventions](https://github.com/openservicebrokerapi/servicebroker/blob/master/profile.md#service-metadata) for more details."
+    },
+    "free": {
+      "type": "boolean",
+      "default": true
+    },
+    "bindable": {
+      "type": "boolean"
+    },
+    "schemas": {
+      "type": "SchemasObject",
+      "properties": {
+        "service_instance": {
+          "type": "object",
+          "properties": {
+            "create": {
+              "type": "object",
+              "properties": {
+                "parameters": {
+                  "type": "object",
+                  "$ref": "#/definitions/JSONSchemaObject"
+                }
+              },
+              "$ref": "#/definitions/SchemaParameters"
+            },
+            "update": {
+              "type": "object",
+              "properties": {
+                "parameters": {
+                  "type": "object",
+                  "$ref": "#/definitions/JSONSchemaObject"
+                }
+              },
+              "$ref": "#/definitions/SchemaParameters"
+            }
+          },
+          "$ref": "#/definitions/ServiceInstanceSchemaObject"
+        },
+        "service_binding": {
+          "type": "object",
+          "properties": {
+            "create": {
+              "type": "object",
+              "properties": {
+                "parameters": {
+                  "type": "object",
+                  "$ref": "#/definitions/JSONSchemaObject"
+                }
+              },
+              "$ref": "#/definitions/SchemaParameters"
+            }
+          },
+          "$ref": "#/definitions/ServiceBindingSchemaObject"
+        }
+      }
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

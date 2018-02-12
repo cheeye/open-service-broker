@@ -1,0 +1,20 @@
+{
+  "name": "ServiceInstanceAsyncProvision",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "dashboard_url": {
+      "type": "string"
+    },
+    "operation": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

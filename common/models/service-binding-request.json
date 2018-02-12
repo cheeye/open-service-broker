@@ -1,0 +1,44 @@
+{
+  "name": "ServiceBindingRequest",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "context": {
+      "type": "Context",
+      "description": "See [Context Conventions](https://github.com/openservicebrokerapi/servicebroker/blob/master/profile.md#context-object) for more details."
+    },
+    "service_id": {
+      "type": "string",
+      "required": true
+    },
+    "plan_id": {
+      "type": "string",
+      "required": true
+    },
+    "app_guid": {
+      "type": "string",
+      "x-deprecated": true
+    },
+    "bind_resource": {
+      "type": "ServiceBindingResourceObject",
+      "properties": {
+        "app_guid": {
+          "type": "string"
+        },
+        "route": {
+          "type": "string"
+        }
+      }
+    },
+    "parameters": {
+      "type": "Object"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
