@@ -18,7 +18,7 @@
     "public": true
   },
   "Service": {
-    "dataSource": null,
+    "dataSource": "db",
     "public": false
   },
   "DashboardClient": {

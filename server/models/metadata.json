@@ -1,7 +1,8 @@
 {
   "name": "Metadata",
   "base": "PersistedModel",
-  "idInjection": true,
+  "idInjection": false,
+  "hidden": ["id"],
   "options": {
     "validateUpsert": true
   },
