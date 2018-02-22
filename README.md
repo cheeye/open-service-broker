@@ -58,6 +58,7 @@ The models defined by the `common-broker` are essential for any plug-in service 
 
 For other loopback applications, here's an example of using one of these models within your app and writing data to a predefined datasource.
 ```js
+let db = app.datasources.cloudant;
 let Service = osb.models.Service;
 Service.attachTo(db);
 Service.create(service, function(err){
