@@ -35,6 +35,7 @@ Catalog.remoteMethod('get',
        type: 'string',
        description: 'version number of the Service Broker API that the Platform will use',
        required: true,
+       default: "2.13",
        http: { source: 'header' } } ],
   returns:
    [ { description: 'catalog response',
