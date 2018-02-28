@@ -42,7 +42,7 @@ Catalog.remoteMethod('get',
        type: 'Catalog',
        arg: 'data',
        root: true } ],
-  http: { verb: 'get', path: '/v2/catalog' },
+  http: { verb: 'get', path: '/' },
   description: "A response containing a catalog of all services this Service Broker supports" }
 );
 

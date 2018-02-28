@@ -11,28 +11,30 @@ module.exports = function(ServiceInstances) {
  */
 ServiceInstances.serviceInstanceProvision = function(body, accepts_incomplete, callback) {
 
+  console.log("something?");
+
   // Replace the code below with your implementation.
   // Please make sure the callback is invoked.
-  process.nextTick(function() {
-    var err = new Error('Not implemented');
-    callback(err);
-  });
-  
+  // process.nextTick(function() {
+  //   var err = new Error('Not implemented');
+  //   callback(err);
+  // });
+
   /*
   var err0 = new Error('Bad Request');
   err0.statusCode = 400;
   return cb(err0);
-  */ 
+  */
   /*
   var err1 = new Error('Conflict');
   err1.statusCode = 409;
   return cb(err1);
-  */ 
+  */
   /*
   var err2 = new Error('Unprocessable Entity');
   err2.statusCode = 422;
   return cb(err2);
-  */ 
+  */
 }
 
 
@@ -52,17 +54,17 @@ ServiceInstances.serviceInstanceUpdate = function(body, accepts_incomplete, call
     var err = new Error('Not implemented');
     callback(err);
   });
-  
+
   /*
   var err0 = new Error('Bad Request');
   err0.statusCode = 400;
   return cb(err0);
-  */ 
+  */
   /*
   var err1 = new Error('Unprocessable entity');
   err1.statusCode = 422;
   return cb(err1);
-  */ 
+  */
 }
 
 
@@ -83,22 +85,22 @@ ServiceInstances.serviceInstanceDeprovision = function(accepts_incomplete, servi
     var err = new Error('Not implemented');
     callback(err);
   });
-  
+
   /*
   var err0 = new Error('Bad Request');
   err0.statusCode = 400;
   return cb(err0);
-  */ 
+  */
   /*
   var err1 = new Error('Gone');
   err1.statusCode = 410;
   return cb(err1);
-  */ 
+  */
   /*
   var err2 = new Error('Unprocessable Entity');
   err2.statusCode = 422;
   return cb(err2);
-  */ 
+  */
 }
 
 
@@ -119,17 +121,17 @@ ServiceInstances.serviceInstanceLastOperationGet = function(service_id, plan_id,
     var err = new Error('Not implemented');
     callback(err);
   });
-  
+
   /*
   var err0 = new Error('Bad Request');
   err0.statusCode = 400;
   return cb(err0);
-  */ 
+  */
   /*
   var err1 = new Error('Gone');
   err1.statusCode = 410;
   return cb(err1);
-  */ 
+  */
 }
 
 
@@ -139,7 +141,7 @@ ServiceInstances.remoteMethod('serviceInstanceProvision',
   { isStatic: true,
   consumes: [ 'application/json' ],
   produces: [ 'application/json' ],
-  accepts: 
+  accepts:
    [ { arg: 'body',
        type: 'ServiceInstanceProvisionRequest',
        description: 'parameters for the requested service instance provision',
@@ -150,7 +152,7 @@ ServiceInstances.remoteMethod('serviceInstanceProvision',
        description: 'asynchronous operations supported',
        required: undefined,
        http: { source: 'query' } } ],
-  returns: 
+  returns:
    [ { description: 'OK',
        type: 'ServiceInstanceProvision',
        arg: 'data',
@@ -171,7 +173,7 @@ ServiceInstances.remoteMethod('serviceInstanceUpdate',
   { isStatic: true,
   consumes: [ 'application/json' ],
   produces: [ 'application/json' ],
-  accepts: 
+  accepts:
    [ { arg: 'body',
        type: 'ServiceInstanceUpdateRequest',
        description: 'parameters for the requested service instance update',
@@ -182,7 +184,7 @@ ServiceInstances.remoteMethod('serviceInstanceUpdate',
        description: 'asynchronous operations supported',
        required: undefined,
        http: { source: 'query' } } ],
-  returns: 
+  returns:
    [ { description: 'OK', type: 'Object', arg: 'data', root: true },
      { description: 'Accepted',
        type: 'AsyncOperation',
@@ -195,7 +197,7 @@ ServiceInstances.remoteMethod('serviceInstanceUpdate',
 ServiceInstances.remoteMethod('serviceInstanceDeprovision',
   { isStatic: true,
   produces: [ 'application/json' ],
-  accepts: 
+  accepts:
    [ { arg: 'accepts_incomplete',
        type: 'boolean',
        description: 'asynchronous operations supported',
@@ -211,7 +213,7 @@ ServiceInstances.remoteMethod('serviceInstanceDeprovision',
        description: 'id of the plan associated with the instance being deleted',
        required: true,
        http: { source: 'query' } } ],
-  returns: 
+  returns:
    [ { description: 'OK', type: 'Object', arg: 'data', root: true },
      { description: 'Accepted',
        type: 'AsyncOperation',
@@ -224,7 +226,7 @@ ServiceInstances.remoteMethod('serviceInstanceDeprovision',
 ServiceInstances.remoteMethod('serviceInstanceLastOperationGet',
   { isStatic: true,
   produces: [ 'application/json' ],
-  accepts: 
+  accepts:
    [ { arg: 'service_id',
        type: 'string',
        description: 'id of the service associated with the instance',
@@ -240,12 +242,12 @@ ServiceInstances.remoteMethod('serviceInstanceLastOperationGet',
        description: 'a provided identifier for the operation',
        required: undefined,
        http: { source: 'query' } } ],
-  returns: 
+  returns:
    [ { description: 'OK',
        type: 'ServiceInstanceLastOperation',
        arg: 'data',
        root: true } ],
-  http: 
+  http:
    { verb: 'get',
      path: '/v2/service_instances/:instance_id/last_operation' },
   description: undefined }

@@ -9,7 +9,7 @@
     "id"
   ],
   "http": {
-    "path": "/"
+    "path": "/v2/catalog"
   },
   "properties": {
     "services": {
