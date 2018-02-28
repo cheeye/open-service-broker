@@ -9,5 +9,8 @@ app.registerService = function(service) {
   app.models.Service.create(service)
 }
 
+app.provisionService = function(serviceInstanceProvision) {
+  app.log.info("Provision something")
+}
 
 };
