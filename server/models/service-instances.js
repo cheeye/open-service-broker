@@ -10,7 +10,7 @@ module.exports = function(ServiceInstances) {
  * @param {ServiceInstanceAsyncProvision} result Result object
  */
 ServiceInstances.serviceInstanceProvision = function(instance_id, body, accepts_incomplete, callback) {
-  """ This gets replaced with a function during registration time in the module_hooks.js   """
+  // This gets replaced with a function during registration time in the module_hooks.js
 
   // Replace the code below with your implementation.
   // Please make sure the callback is invoked.
