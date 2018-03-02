@@ -6,8 +6,6 @@ app.registerService = function(service, provisionFunc) {
   //force in-memory db attachment since consumers of this module may be re-using this model with another datasource
   app.models.Service.attachTo(app.dataSources.db);
   app.models.Service.create(service);
-
-
 }
 
 app.registerProvisionListener = function(provisionFunc) {

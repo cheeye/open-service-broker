@@ -2,6 +2,7 @@
   "name": "ServiceInstanceProvisionRequest",
   "base": "PersistedModel",
   "idInjection": true,
+  "hidden": ["id"],
   "options": {
     "validateUpsert": true
   },

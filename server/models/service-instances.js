@@ -9,9 +9,8 @@ module.exports = function(ServiceInstances) {
  * @param {Error|string} err Error object
  * @param {ServiceInstanceAsyncProvision} result Result object
  */
-ServiceInstances.serviceInstanceProvision = function(body, accepts_incomplete, callback) {
-
-  console.log("something?");
+ServiceInstances.serviceInstanceProvision = function(instance_id, body, accepts_incomplete, callback) {
+  """ This gets replaced with a function during registration time in the module_hooks.js   """
 
   // Replace the code below with your implementation.
   // Please make sure the callback is invoked.
@@ -142,7 +141,12 @@ ServiceInstances.remoteMethod('serviceInstanceProvision',
   consumes: [ 'application/json' ],
   produces: [ 'application/json' ],
   accepts:
-   [ { arg: 'body',
+   [ { arg: 'instance_id',
+       type: 'string',
+       description: "Generated uuid from the cloud platform for the newly provisioned instance",
+       required: true,
+       http: { source: 'path' } },
+     { arg: 'body',
        type: 'ServiceInstanceProvisionRequest',
        description: 'parameters for the requested service instance provision',
        required: true,
@@ -174,7 +178,12 @@ ServiceInstances.remoteMethod('serviceInstanceUpdate',
   consumes: [ 'application/json' ],
   produces: [ 'application/json' ],
   accepts:
-   [ { arg: 'body',
+   [ { arg: 'instance_id',
+       type: 'string',
+       description: "Generated uuid from the cloud platform for the newly provisioned instance",
+       required: true,
+       http: { source: 'path' } },
+     { arg: 'body',
        type: 'ServiceInstanceUpdateRequest',
        description: 'parameters for the requested service instance update',
        required: true,
@@ -198,7 +207,12 @@ ServiceInstances.remoteMethod('serviceInstanceDeprovision',
   { isStatic: true,
   produces: [ 'application/json' ],
   accepts:
-   [ { arg: 'accepts_incomplete',
+   [ { arg: 'instance_id',
+       type: 'string',
+       description: "Generated uuid from the cloud platform for the newly provisioned instance",
+       required: true,
+       http: { source: 'path' } },
+     { arg: 'accepts_incomplete',
        type: 'boolean',
        description: 'asynchronous operations supported',
        required: undefined,
@@ -227,7 +241,12 @@ ServiceInstances.remoteMethod('serviceInstanceLastOperationGet',
   { isStatic: true,
   produces: [ 'application/json' ],
   accepts:
-   [ { arg: 'service_id',
+   [ { arg: 'instance_id',
+       type: 'string',
+       description: "Generated uuid from the cloud platform for the newly provisioned instance",
+       required: true,
+       http: { source: 'path' } },
+     { arg: 'service_id',
        type: 'string',
        description: 'id of the service associated with the instance',
        required: undefined,
