@@ -1,3 +1,4 @@
+const uuid = require('uuid/v4');
 
 module.exports = function(ServiceInstances) {
 
@@ -145,6 +146,7 @@ ServiceInstances.remoteMethod('serviceInstanceProvision',
        type: 'string',
        description: "Generated uuid from the cloud platform for the newly provisioned instance",
        required: true,
+       default: uuid(),
        http: { source: 'path' } },
      { arg: 'body',
        type: 'ServiceInstanceProvisionRequest',

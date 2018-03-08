@@ -1,4 +1,3 @@
-
 module.exports = function(Catalog) {
 
 /**
@@ -9,18 +8,17 @@ module.exports = function(Catalog) {
  * @param {Catalog} result Result object
  */
 Catalog.get = function(X_Broker_API_Version, callback) {
-  console.log("Catalog requested")
+  const app = Catalog.app;
+  app.log.debug("Catalog requested")
 
-  var app = Catalog.app;
-  var Service = app.models.Service;
+  let Service = app.models.Service;
   Service.find({}, function(err, services){
     if(err){
-      console.error("Error retreiving Catalog Services")
-      console.error(err)
+      app.log.error({err: err}, "Error retreiving Catalog Services")
       callback(err);
     }
 
-    console.log("Services: " + JSON.stringify(services))
+    app.log.debug({services: services}, "Service list returned")
 
     //FIXME return the correct Catalog object instead of this hack
     callback(null, { "services": services})

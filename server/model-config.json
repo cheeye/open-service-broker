@@ -51,7 +51,7 @@
   },
   "ServiceInstanceProvisionRequest": {
     "dataSource": null,
-    "public": false
+    "public": true
   },
   "ServiceInstanceProvision": {
     "dataSource": null,

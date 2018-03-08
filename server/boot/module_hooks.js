@@ -4,7 +4,7 @@ app.registerService = function(service, provisionFunc) {
   app.log.debug({service: service}, "Registering service")
 
   //force in-memory db attachment since consumers of this module may be re-using this model with another datasource
-  app.models.Service.attachTo(app.dataSources.db);
+  // app.models.Service.attachTo(app.dataSources.db);
   app.models.Service.create(service);
 
 
