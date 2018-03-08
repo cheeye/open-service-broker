@@ -77,7 +77,7 @@ ServiceInstances.serviceInstanceUpdate = function(body, accepts_incomplete, call
  * @param {Error|string} err Error object
  * @param {AsyncOperation} result Result object
  */
-ServiceInstances.serviceInstanceDeprovision = function(accepts_incomplete, service_id, plan_id, callback) {
+ServiceInstances.serviceInstanceDeprovision = function(instance_id, accepts_incomplete, service_id, plan_id, callback) {
 
   // Replace the code below with your implementation.
   // Please make sure the callback is invoked.
